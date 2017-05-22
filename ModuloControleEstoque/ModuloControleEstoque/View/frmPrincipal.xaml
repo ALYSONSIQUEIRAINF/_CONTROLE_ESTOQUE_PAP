@@ -1,0 +1,96 @@
+﻿<Window x:Class="ModuloControleEstoque.View.frmPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModuloControleEstoque.View"
+        mc:Ignorable="d"
+        Title="Modulo Estoque" Height="360" Width="720" Loaded="Window_Loaded" Closing="Window_Closing" MinWidth="620" MinHeight="350" Activated="Window_Activated">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="55*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+
+        <Menu x:Name="menu" HorizontalAlignment="Stretch" Height="30" VerticalAlignment="Top" Grid.ColumnSpan="3" Grid.RowSpan="2" >
+            <MenuItem Header="Produto" Height="30" Width="60" Grid.Column="0" Grid.Row="0">
+                <MenuItem x:Name="menuCadastroProduto" Header="Cadastro" HorizontalAlignment="Left" Width="193" Click="menuCadastroProduto_Click"/>
+                <MenuItem x:Name="menuEntradaProduto" Header="Entrada de Produto" HorizontalAlignment="Left" Width="193" Click="menuEntradaProduto_Click"/>
+                <MenuItem x:Name="menuAlteracaoProduto" Header="Alteração Produto" HorizontalAlignment="Left" Width="193" Click="menuAlteracaoProduto_Click"/>
+                <MenuItem x:Name="menuCategoriaProduto" Header="Cadastro Categoria" HorizontalAlignment="Left" Width="193" Click="menuCategoriaProduto_Click"/>
+                <MenuItem x:Name="menuEmbalagemProduto" Header="Embalagem Produto" HorizontalAlignment="Left" Width="193" Click="menuEmbalagemProduto_Click"/>
+            </MenuItem>
+            <MenuItem Header="Vendedor" Height="30" Width="60">
+                <MenuItem x:Name="menuCadastroVendedor" Header="Cadastro de Vendedor" HorizontalAlignment="Left" Width="210" Click="menuCadastroVendedor_Click"/>
+            </MenuItem>
+            <MenuItem Header="Cliente" Height="30" Width="60">
+                <MenuItem x:Name="menuCadastroCliente" Header="Cadastro de Cliente" HorizontalAlignment="Left" Width="190" Click="menuCadastroCliente_Click"/>
+            </MenuItem>
+            <MenuItem Header="Condição Pagamento" Width="130">
+                <MenuItem x:Name="menuCadastroCondicaoPagamento" Header="Cadastro de Condição" HorizontalAlignment="Left" Width="210" Click="menuCadastroCondicaoPagamento_Click"/>
+            </MenuItem>
+            <MenuItem Header="Relatorio" Height="30" Width="60">
+                <MenuItem x:Name="menuRelatorioDeSaidaProduto" Header="Saida de Produtos" HorizontalAlignment="Left" Width="190" Click="menuRelatorioDeSaidaProduto_Click"/>
+                <MenuItem x:Name="menuRelatorioGeralDeEstoque" Header="Estoque Atual" HorizontalAlignment="Left" Width="190" Click="menuRelatorioGeralDeEstoque_Click"/>
+                <MenuItem x:Name="menuRelatorioVendaVendedor" Header="Venda Por Vendedor" HorizontalAlignment="Left" Width="195" Click="menuRelatorioVendaVendedor_Click"/>
+            </MenuItem>
+            <MenuItem Header="Transportadora" Height="30" Width="100">
+                <MenuItem x:Name="menuCadastroTransportadora" Header="Cadastro de Transportadora" HorizontalAlignment="Left" Width="235" Click="menuCadastroTransportadora_Click"/>
+            </MenuItem>
+            <MenuItem Header="Venda" Height="30" Margin="0" Width="60">
+                <MenuItem x:Name="menuFazerVenda" Header="Registrar Venda" HorizontalAlignment="Left" Width="200" Click="menuFazerVenda_Click"/>
+
+            </MenuItem>
+            <MenuItem Header="Endereçamento" Height="30"  Margin="0" Width="60">
+                <MenuItem x:Name="menuEnderecoEstoque" Header="Cadastrar Endereco de Estoque" HorizontalAlignment="Left" Width="200" Click="menuEnderecoEstoque_Click"/>
+                <MenuItem x:Name="menuEstoqueProduto" Header="Adicionar Estoque Produto" HorizontalAlignment="Left" Width="200" Click="menuEstoqueProduto_Click"/>
+            </MenuItem>
+            <MenuItem Header="Sair" Margin="0">
+                <MenuItem x:Name="menuSair" Header="Sair" HorizontalAlignment="Left" Width="130" Click="menuSair_Click"/>
+                <MenuItem x:Name="menuLogout" Header="Logout" HorizontalAlignment="Left" Width="130" Click="menuLogout_Click"/>
+            </MenuItem>
+
+
+
+        </Menu>
+        <Label x:Name="lblCodigoProduto" Content="Codigo Produto:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Margin="60,6,0,6" VerticalAlignment="Center" RenderTransformOrigin="-7.985,-0.888" Height="30" Width="106" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtCodigoProduto" Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,10,15,10" Height="22" TextWrapping="Wrap" Width="120"/>
+
+        <Label x:Name="lblQuantidadeProduto" Content="Quantidade:" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="-7.985,-0.888" Height="30" Width="106" Margin="0,6"/>
+        <TextBox x:Name="txtQuantidadeProduto" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" Height="22" Margin="0,10,180,10" TextWrapping="Wrap" VerticalAlignment="Center" Width="44"/>
+
+        <Label x:Name="lblCodigoVendedor" Content="Codigo Vendedor:" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="-7.985,-0.888" Height="30" Width="106" Margin="0,7,0,6"/>
+        <TextBox x:Name="txtCodigoVendedor" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Height="23" Margin="0,10,70,10" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
+
+        <Label x:Name="lblCpfCliente" Content="CPF Cliente:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="60,7,0,6" VerticalAlignment="Center" RenderTransformOrigin="-7.985,-0.888" Height="30" Width="106" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtCpfCliente" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Height="23" Margin="0,10,15,10" TextWrapping="Wrap"  VerticalAlignment="Center" Width="120"/>
+
+        <Label x:Name="lblCondicaoPagamento" Content="Condição de Pagamento:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,6,0,7" RenderTransformOrigin="-7.985,-0.888" Height="30" Width="144" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cbxCondicaoPagamento" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Margin="0,10,15,11" VerticalAlignment="Center" Width="120"/>
+
+        <Label x:Name="lblCodigoTransportadora" Content="Transportadora:" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="-7.985,-0.888" Height="30" Width="106" Margin="0,6,0,7"/>
+        <ComboBox x:Name="cbxTransportadora" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" Margin="0,10,70,11" VerticalAlignment="Center" Width="120"/>
+
+        <DataGrid x:Name="grdProdutos" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AutoGenerateColumns="False" Margin="15,15,15,15">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nome" Binding="{Binding NomeProduto}" Width="70"/>
+                <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}"/>
+                <DataGridTextColumn Header="Preço" Binding="{Binding PrecoUnitario}"/>
+                <DataGridTextColumn Header="Subtotal" Binding="{Binding SubTotal}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnAdicionarItemVenda" Content="Adicionar" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" Width="75" Click="btnAdicionarItemVenda_Click" RenderTransformOrigin="1,4.05"/>
+        <Label Content="Total:" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="15" FontWeight="ExtraBold" Foreground="Red" Margin="0,10,90,0"/>
+        <Label x:Name="lblTotalPedido" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top"  FontSize="15" FontWeight="ExtraBold" Foreground="Red" Margin="0,10,0,0" Width="90" Height="25"/>
+
+        <Button x:Name="btnFializarVenda" Content="Finalizar" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,25,50" Width="75" Click="btnFinalizarVenda_Click"/>
+
+    </Grid>
+</Window>

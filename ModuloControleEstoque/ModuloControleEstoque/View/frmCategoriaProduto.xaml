@@ -1,0 +1,29 @@
+﻿<Window x:Class="ModuloControleEstoque.View.frmCategoriaProduto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModuloControleEstoque.View"
+        mc:Ignorable="d"
+        Title="Cadastrar/Editar Categoria Produto" Height="300" Width="400" MinWidth="400" MinHeight="300">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="70*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="60*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblNomeCategoria" Content="Descrição Categoria:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+        <TextBox x:Name="txtNomeCategoria" HorizontalAlignment="Stretch" Margin="49,13,0,0" VerticalAlignment="Center" Width="120" FontSize="12" Padding="8" Grid.Column="1" Grid.Row="0"/>
+
+        <Button x:Name="btnGravarCategoriaProduto" Content="Gravar" HorizontalAlignment="Center" VerticalAlignment="Center" Width="70" Click="btnGravarCategoriaProduto_Click" Grid.Row="1" Grid.Column="0"/>
+        <Button x:Name="btnAlterarCategoria" Content="Alterar" HorizontalAlignment="Right" Margin="0,0,15,0" VerticalAlignment="Center" Width="70" Click="btnAlterarCategoria_Click" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="btnExcluirCategoria" Content="Excluir" HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Center" Width="70" Click="btnExcluirCategoria_Click" Grid.Row="1" Grid.Column="1"/>
+
+    </Grid>
+</Window>

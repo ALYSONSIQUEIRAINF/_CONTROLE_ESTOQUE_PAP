@@ -1,0 +1,54 @@
+﻿<Window x:Class="ModuloControleEstoque.View.frmAlteracaoProduto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModuloControleEstoque.View"
+        mc:Ignorable="d"
+        Title="Alteracao Produto" Height="300" Width="350" MinWidth="350" MinHeight="300" Loaded="Window_Loaded">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="60*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblCodigoProduto" Content="Codigo Produto" HorizontalAlignment="Right" VerticalAlignment="Center"  Grid.Row="0" Grid.Column="0" Margin="0,2.5"/>
+        <TextBox x:Name="txtCodigoProduto" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Width="120" FontSize="12" Padding="8" Grid.Row="0" Grid.Column="1" />
+        
+        <Label x:Name="lblNomeProduto" Content="Descrição Produto:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1"/>
+        <TextBox x:Name="txtNomeProduto" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Width="120" FontSize="12" Padding="8" Grid.Column="1" Grid.Row="1"/>
+
+        <Label x:Name="lblPrecoProduto" Content="Preço:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+        <TextBox x:Name="txtPrecoProduto" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Width="120" FontSize="12" Padding="8" Grid.Row="2" Grid.Column="1"/>
+
+        <Label x:Name="lblEmbalagemDisponivel" Content="Embalagens Disponiveis:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3"  Grid.Column="0"/>
+        <ComboBox x:Name="cbxEmbalagemDisponivel" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Width="120" Grid.Row="3" Grid.Column="1"/>
+
+        <Label x:Name="lblCategoriaProduto" Content="Categoria:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" />
+        <ComboBox x:Name="cbxCategoriaProduto" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Width="120" Grid.Row="4" Grid.Column="1" />
+
+        <Label x:Name="lblPesoLiquido" Content="Peso Liquido:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0"/>
+        <TextBox x:Name="txtPesoLiquido" HorizontalAlignment="Stretch" VerticalAlignment="Center" Width="120" FontSize="12" Padding="8" Grid.Row="5" Grid.Column="1"/>
+
+        <Label x:Name="lblPesoBruto" Content="Peso Bruto" HorizontalAlignment="Right" VerticalAlignment="Center"  Grid.Row="6" Grid.Column="0"/>
+        <TextBox x:Name="txtPesoBruto" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Width="120" FontSize="12" Padding="8" Grid.Row="6" Grid.Column="1"/>
+
+        <Button x:Name="btnGravarAlteracaoProduto" Content="Gravar" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="70" Click="btnGravarAlteracaoProduto_Click" Grid.Row="8" Grid.Column="1" IsEnabled="false"/>
+        <Button x:Name="btnBuscarProduto" Content="Buscar" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="70" Click="btnBuscarProduto_Click" Grid.Row="8"/>
+        
+        
+
+    </Grid>
+</Window>

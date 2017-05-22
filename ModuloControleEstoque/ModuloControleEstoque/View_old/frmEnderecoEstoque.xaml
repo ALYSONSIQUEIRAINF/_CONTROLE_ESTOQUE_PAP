@@ -1,0 +1,71 @@
+﻿<Window x:Class="ModuloControleEstoque.View.frmEnderecoEstoque"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModuloControleEstoque.View"
+        mc:Ignorable="d"
+        Title="Endereco Estoque" Height="300" Width="300" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Button Content="Gravar"
+                Grid.Column="1"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Width="75"                
+                Grid.Row="5"
+                x:Name="btnGravarEnderecoProduto"
+                Click="btnGravarEnderecoProduto_Click" />
+       
+        
+        <Label Content="Produto"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"/>
+
+        <Label Content="Rua"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Grid.Row="1" />
+
+        <ComboBox x:Name="cboNomeProduto"  
+                      Margin="0 10 30 10" Grid.Column="1" 
+                      Grid.Row="0" SelectionChanged="cboNomeProduto_SelectionChanged"  />
+
+        <TextBox Grid.Column="1"
+                 Grid.Row="1"
+                 Margin="0 10 30 10"
+                 x:Name="txtEnderecoRua"/>
+        
+        <Label Content="Bloco"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Grid.Row="2" />
+
+        <TextBox Grid.Column="1"
+                 Grid.Row="2"
+                 Margin="0 10 30 10"
+                 x:Name="txtEnderecoBloco"/>
+
+        <Label Content="Pratileira"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Grid.Row="3" />
+
+        <TextBox Grid.Column="1"
+                 Grid.Row="3"
+                 Margin="0 10 30 10"
+                 x:Name="txtEnderecoPratileira"/>
+
+    </Grid>
+</Window>

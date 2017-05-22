@@ -1,0 +1,44 @@
+﻿<Window x:Class="ModuloControleEstoque.View.frmEmbalagemProduto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModuloControleEstoque.View"
+        mc:Ignorable="d"
+        Title="Cadastro/Altera EmbalagemProduto" Height="300" Width="300">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblDescricaoEmbalagem" Content="Descrição Categoria:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+        <TextBox x:Name="txtDescricaoEmbalagem" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Width="120" FontSize="12" Padding="8" Grid.Column="1" Grid.Row="0"/>
+
+        <Label x:Name="lblCodigoEmbalagem" Content="Código Categoria:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" />
+        <TextBox x:Name="txtCodigoEmbalagem" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Width="120" FontSize="12" Padding="8" Grid.Column="1" Grid.Row="1"/>
+
+        <Label x:Name="lblQuantidadeEmbalagem" Content="Quantidade Embalagem:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2"/>
+        <TextBox x:Name="txtQuantidadeEmbalagem" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Width="120" FontSize="12" Padding="8" Grid.Column="1" Grid.Row="2" />
+
+        <Label x:Name="lblTipoEmbalagem" Content="Tipo Embalagem:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3"/>
+        <TextBox x:Name="txtTipoEmbalagem" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Width="120" FontSize="12" Padding="8" Grid.Column="1" Grid.Row="3" />
+
+
+        <Button x:Name="btnGravarCategoria" Content="Gravar" HorizontalAlignment="Center" VerticalAlignment="Center" Width="54" Click="btnGravarProduto_Click" Grid.Row="4" Grid.Column="0" Margin="10,18,82,17"/>
+        <Button x:Name="btnAlterarCategoria" Content="Alterar" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="51" Click="btnAlterarCategoria_Click" Grid.Row="4" Grid.Column="0" Margin="85,18,10,17" />
+        <Button x:Name="btnExcluirCategoria" Content="Excluir" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="70" Click="btnExcluirCategoria_Click" Grid.Row="4" Grid.Column="1" Margin="63,18,13,17"/>
+
+
+
+    </Grid>
+</Window>

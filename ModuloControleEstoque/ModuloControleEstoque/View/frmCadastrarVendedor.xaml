@@ -1,0 +1,34 @@
+﻿<Window x:Class="ModuloControleEstoque.View.frmCadastrarVendedor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModuloControleEstoque.View"
+        mc:Ignorable="d"
+        Title="frmCadastrarVendedor" Height="300" Width="400" MinWidth="400" MinHeight="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="60*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label x:Name="lblNomeVendedor" Content="Nome:" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtNomeVendedor" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="15,0,0,0" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
+
+        <Label x:Name="lblCPFVendedor" Content="CPF:" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtCPFVendedor" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="15,0,0,0" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
+
+        <Label x:Name="lblComissaoVendedor" Content="Comissão:" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtComissaoVendedor" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Margin="15,0,0,0" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
+
+        <Button x:Name="btnCadastrarVendedor" Content="Cadastrar" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Width="55" Margin="0,0,15,0" Click="btnCadastrarVendedor_Click"/>
+        <Button x:Name="btnAlterarVendedor" Content="Alterar" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="55" Click="btnAlterarVendedor_Click" IsEnabled="False"/>
+        <Button x:Name="btnBuscarVendedor" Content="Buscar" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="55" Margin="15,0,0,0" Click="btnBuscarVendedor_Click"/>
+    </Grid>
+</Window>

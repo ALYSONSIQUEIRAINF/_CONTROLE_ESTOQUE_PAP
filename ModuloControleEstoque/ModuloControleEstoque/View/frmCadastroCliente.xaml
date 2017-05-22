@@ -1,0 +1,34 @@
+﻿<Window x:Class="ModuloControleEstoque.View.frmCadastroCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModuloControleEstoque.View"
+        mc:Ignorable="d"
+        Title="Cadastro Cliente" Height="310" Width="310" MinWidth="310" MinHeight="310">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="75*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblNome" Content="Nome:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtNome"  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,15,0" FontSize="12" Padding="5"/>
+
+        <Label x:Name="lblSobreNome" Content="SobreNome:"  Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,22"/>
+        <TextBox x:Name="txtSobreNome" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,22,15,17" FontSize="12" Padding="5"/>
+        
+        <Label x:Name="lblCpf" Content="CPF:"  Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtCpf" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,15,0" FontSize="12" Padding="5"/>
+
+        <Button x:Name="btnGravarCliente" Content="Gravar" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" Padding="5" Click="btnGravarCliente_Click" Margin="15,0,0,0"/>
+        <Button x:Name="btnBuscarCliente" Content="Buscar" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12" Padding="5" Click="btnBuscarCliente_Click" Margin="0,0,15,0"/>
+        <Button x:Name="btnAlterarCliente" Content="Alterar" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Padding="5" Click="btnAlterarCliente_Click" IsEnabled="False"/>
+        
+    </Grid>
+</Window>
